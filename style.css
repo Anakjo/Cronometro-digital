@@ -1,0 +1,92 @@
+/*Reset básico para garantir que fique igual em todos os navegadores*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #0f0c29; /*Fundo escuro*/
+    background: linear-gradient(to right, #24243e, #302b63, #0f0c29); /*Degradê escuro*/
+    color: #fafafa;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*Container principal*/
+.container {
+    background-color: #1e1e2f;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 400px;
+    border: 1px solid #4834d4;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+/*Visor do cronometro*/
+#display {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 20px;
+    background-color: #2d2d44;
+    border: 2px solid #686de0;
+    border-radius: 8px;
+    color: #a29bfe;
+    font-size: 1.2rem;
+    font-family: 'Courier New', monospace;
+    text-align: center;
+    outline: none;
+}
+
+/*botões*/
+button {
+    width: 80%;
+    padding: 10px;
+    background-color: #686de0;
+    color: white;
+    border: solid 2px #2d2d44;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+button:hover {
+    background-color: #4834d4;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/*lista com horários salvos*/
+#lista {
+    list-style: none; /*Remove as bolinhas*/
+    margin-top: 20px;
+    width: 100%;
+    max-height: 150px; /*Adiciona um limite de altura*/
+    overflow-y: auto;  /*Cria uma barra de rolagem se a lista crescer muito*/
+    padding: 10px;
+}
+
+#lista li {
+    background-color: #252539;
+    margin-bottom: 5px;
+    padding: 8px;
+    border-radius: 5px;
+    font-family: 'Courier New', monospace;
+    color: #a29bfe;
+    border-left: 3px solid #686de0;
+}
